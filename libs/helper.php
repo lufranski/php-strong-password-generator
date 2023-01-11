@@ -1,6 +1,6 @@
 <?php
     
-    $charNumber = $_GET['charnumber'] ?? false;
+    $charNumber = $_GET['charnumber'];
 
     function randomPswGen ($charNumber){
         $data = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz.-_';

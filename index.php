@@ -39,7 +39,7 @@
     <form class="mx-auto my-3 w-50 text-center">
         <label for="charnumber">Type your password length:</label>
         <input type="number" name="charnumber">
-        <input type="submit" value="VALIDATE">
+        <input type="submit" value="GET PASSWORD">
     </form>
 
     <?php
@@ -51,7 +51,6 @@
             $_SESSION['newPsw'] = $newPsw;
             header('Location: ./success.php');
         }
-
         
 
     ?>
