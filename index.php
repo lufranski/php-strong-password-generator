@@ -22,6 +22,8 @@
     
     <?php
 
+        session_start();
+
         require_once __DIR__ . '/libs/helper.php';
 
     ?>
@@ -42,12 +44,15 @@
 
     <?php
         
+        $newPsw = randomPswGen($charNumber);
+        
+        if($newPsw) {
 
-        echo '<div class="mx-auto my-3 w-50 text-center">' 
-        . '<h3>' 
-        . 'Your new Password is:' . ' ' . randomPswGen($charNumber) 
-        . '</h3>'
-        . '</div>';
+            $_SESSION['newPsw'] = $newPsw;
+            header('Location: ./success.php');
+        }
+
+        
 
     ?>
 </body>
