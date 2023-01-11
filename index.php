@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP Strong Password Generator</title>
+
+    <?php
+
+        $charNumber = $_GET['charnumber'];
+
+        var_dump($charNumber);
+    ?>
 </head>
 <body>
     <!-- FORM -->
@@ -13,5 +20,16 @@
         <input type="number" name="charnumber">
         <input type="submit" value="VALIDATE">
     </form>
+
+    <?php
+        function randomPswGen ($charNumber){
+            $data = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz./-_';
+            return substr(str_shuffle($data), 0, $charNumber);
+        }
+
+        echo randomPswGen($charNumber);
+
+        // var_dump(strlen(randomPswGen($charNumber)))
+    ?>
 </body>
 </html>
