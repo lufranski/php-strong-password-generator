@@ -22,7 +22,7 @@
     
     <?php
 
-        $charNumber = $_GET['charnumber'];
+        require_once __DIR__ . '/libs/helper.php';
 
     ?>
 </head>
@@ -32,6 +32,7 @@
     <div class="mx-auto my-5 w-50 text-center">
         <h1>Strong Password Generator</h1>
     </div>
+    
     <!-- FORM -->
     <form class="mx-auto my-3 w-50 text-center">
         <label for="charnumber">Type your password length:</label>
@@ -40,10 +41,7 @@
     </form>
 
     <?php
-        function randomPswGen ($charNumber){
-            $data = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz./-_';
-            return substr(str_shuffle($data), 0, $charNumber);
-        }
+        
 
         echo '<div class="mx-auto my-3 w-50 text-center">' 
         . '<h3>' 
